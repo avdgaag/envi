@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'envy/version'
+require 'envy'
 
 Gem::Specification.new do |spec|
   spec.name          = 'envy'
@@ -12,8 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = <<-EOS
   Envy is a simple tool to make managing required environment variables for
   your Rails application a little easier. It allows you to define the required
-  variables in a YAML file, provide sensible failure instructions and even set
-  defaults per environment.
+  variables in a YAML file and provide sensible failure instructions.
   EOS
   spec.homepage      = 'https://github.com/avdgaag/envy'
   spec.license       = 'MIT'
@@ -26,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'yard'
-  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'rspec', '>= 2.13'
 end
